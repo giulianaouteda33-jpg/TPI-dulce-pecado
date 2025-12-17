@@ -1,0 +1,256 @@
+/* Estilos específicos para el formulario de pedidos */
+
+.formulario-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+    border-radius: 10px;
+    color: white;
+}
+
+.form-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Secciones del formulario */
+.form-section {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.form-section h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #ff6b6b;
+    font-size: 1.5rem;
+}
+
+/* Filas y grupos del formulario */
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group select,
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group select:focus,
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff6b6b;
+    outline: none;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Grid de productos */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.producto-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.producto-card:hover {
+    border-color: #ff6b6b;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.1);
+}
+
+.producto-info h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.producto-precio {
+    color: #ff6b6b;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.producto-control {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.producto-control label {
+    font-weight: bold;
+    color: #555;
+    white-space: nowrap;
+}
+
+.cantidad-input {
+    width: 80px !important;
+    text-align: center;
+    font-weight: bold;
+}
+
+.producto-subtotal {
+    margin-left: auto;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1rem;
+    min-width: 80px;
+    text-align: right;
+}
+
+/* Sección resumen */
+.resumen-section {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.resumen-box {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 2px solid #dee2e6;
+}
+
+.resumen-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.resumen-item:last-child {
+    border-bottom: none;
+}
+
+.resumen-item span:first-child {
+    font-weight: bold;
+    color: #555;
+}
+
+.resumen-item.total {
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.resumen-item.total span:last-child {
+    color: #ff6b6b;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Botones del formulario */
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid #eee;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: #ff6b6b;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #d33636;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #545b62;
+}
+
+/* Información de ayuda */
+.info-ayuda {
+    background: #e3f2fd;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 3rem;
+    border-left: 4px solid #2196f3;
+}
+
+.info-ayuda h3 {
+    color: #1976d2;
+    margin-bottom: 1rem;
+}
+
+.info-ayuda p {
+    margin-bottom: 0.8rem;
+    color: #333;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.info-ayuda p:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #1976d2;
+}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulce Pecado</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="img/logo.jpg">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Dulce Pecado</div>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#postres">Postres</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="#contacto">Contacto</a></li>  
+                <li><a href="formulario_pedido.html">Nuevo Pedido</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <!-- Logo visible en el hero -->
+            <img src="img/logo.jpg" alt="Dulce Pecado" class="hero-logo">
+            <h1>Bienvenidos a Dulce Pecado</h1>  
+            <p>Los mejores postres para darle un mimo al corazón</p>
+            <a href="#postres" class="cta-button">Ver postres</a>
+        </section>
+
+        <section id="postres">
+            <h2>Productos Destacados</h2>
+
+            <div class="postres-grid">
+                <div class="postres-card">
+                    <img src="img/cookies.jpg" alt="Cookies New York">
+                    <h3>Cookies New York</h3>
+                    <p class="precio">$2.500</p>
+                    <p class="descripcion">Galletas suaves al estilo de New York, con chips de chocolate y un toque de vainilla. Perfectas para acompañar tu café.</p>
+                    <button onclick="mostrarInformacion('cookies')">Más información</button>
+                </div>
+
+                <div class="postres-card">
+                    <img src="img/desayuno.jpg" alt="Desayuno Especial">
+                    <h3>Desayunos Especiales</h3>
+                    <p class="precio">$17.000</p>
+                    <p class="descripcion">Desayuno completo con variedad de productos a elección: medialunas, jugo natural, frutas y nuestros postres estrella.</p>
+                    <button onclick="mostrarInformacion('desayuno')">Más información</button>
+                </div>
+
+                <div class="postres-card">
+                    <img src="img/torta rogel.jpg" alt="Torta Rogel">
+                    <h3>Torta Rogel</h3>
+                    <p class="precio">$22.500</p>
+                    <p class="descripcion">Láminas de rogel crujientes con dulce de leche casero y merengue italiano. Nuestra especialidad de la casa.</p>
+                    <button onclick="mostrarInformacion('rogel')">Más información</button>
+                </div>
+            <div class="promocion-especial">
+                <h3>✨ Oferta Especial del Mes ✨</h3>
+                <p>¡Combo Familiar! Torta Rogel + 6 cookies new york <strong>$35.000</strong></p>
+                <a href="pedidos.html" class="cta-button oferta-btn">¡Quiero esta oferta!</a>
+            </div>
+        </section>
+
+        <section id="nosotros">
+            <div class="nosotros-container">
+                <div class="nosotros-texto">
+                    <h2>Sobre Dulce Pecado</h2>
+                    <p>Desde 2015, nos dedicamos a crear los postres más deliciosos y memorables. Cada creación es elaborada con ingredientes de primera calidad y mucho amor.</p>
+                    <p>Nuestra filosofía es simple: <strong>calidad, frescura y sabor</strong> en cada bocado. Trabajamos con pasión para endulzar tus momentos especiales.</p>
+                    <div class="valores">
+                        <div class="valor">
+                            <span>🥇</span>
+                            <h4>Calidad Premium</h4>
+                            <p>Ingredientes seleccionados</p>
+                        </div>
+                        <div class="valor">
+                            <span>❤️</span>
+                            <h4>Hecho con Amor</h4>
+                            <p>Recetas tradicionales</p>
+                        </div>
+                        <div class="valor">
+                            <span>🚚</span>
+                            <h4>Entrega Rápida</h4>
+                            <p>En menos de 3h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonios">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div class="testimonios-grid">
+                <div class="testimonio">
+                    <p>"La mejor torta Rogel que probé en mi vida. ¡Increíble!"</p>
+                    <div class="cliente">
+                        <strong>María González</strong>
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+                <div class="testimonio">
+                    <p>"Pedí el desayuno para sorprender a mi esposa y quedó encantada."</p>
+                    <div class="cliente">
+                        <strong>Carlos Rodríguez</strong>
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+                <div class="testimonio">
+                    <p>"Los cupcakes para el cumpleaños de mi hija fueron un éxito total."</p>
+                    <div class="cliente">
+                        <strong>Ana Martínez</strong>
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p class="subtitulo-contacto">¿Tienes alguna consulta o quieres hacer un pedido especial? Escríbenos</p>
+            
+            <div class="contacto-info">
+                <div class="info-item">
+                    <h3>📍 Ubicación</h3>
+                    <p>Provincias Unidas 928, Ciudad Rio Grande</p>
+                </div>
+                <div class="info-item">
+                    <h3>✉️ Email</h3>
+                    <p>dulcepecado@gmail.com</p>
+                </div>
+                <div class="info-item">
+                    <h3>⏰ Horarios</h3>
+                    <p>Lunes a Sábado: 9:00 - 20:00</p>
+                    <p>Domingo: 10:00 - 18:00</p>
+                </div>
+            </div>
+
+            <form action="guardar_contacto.php" method="POST">
+                <div class="form-group">
+                    <input type="text" name="nombre" placeholder="Nombre completo" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <input type="tel" name="telefono" placeholder="Teléfono (opcional)">
+                <textarea name="mensaje" placeholder="Tu mensaje o pedido especial..." required></textarea>
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>Dulce Pecado</h3>
+                <p>Endulzando momentos desde 2015</p>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces Rápidos</h4>
+                <a href="#postres">Productos</a>
+                <a href="pedidos.html">Pedidos Online</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="footer-redes">
+                <h4>Síguenos</h4>
+                <div class="redes-icons">
+                    <a href="#" aria-label="Instagram">📸</a>
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="WhatsApp">💚</a>
+                </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Dulce Pecado. Todos los derechos reservados.</p>
+            <p>Desarrollado con ❤️ para los amantes del dulce</p>
+        </div>
+    </footer>
+
+    <script>
+        // Función para mostrar información de productos
+        function mostrarInformacion(producto) {
+            const mensajes = {
+                'cookies': 'Las Cookies New York se hornean diariamente. Disponibles en chocolate, chips, avena y doble chocolate.',
+                'desayuno': 'El desayuno incluye: 2 medialunas, jugo natural, frutas de estación, café/té y un postre a elección.',
+                'rogel': 'La Torta Rogel lleva 12 capas de masa crujiente y dulce de leche artesanal. Se recomienda pedir con 48h de anticipación.',
+                'cheesecake': 'Nuestro cheesecake es horneado, no congelado. Disponible en frutos rojos, maracuyá o chocolate.',
+                'cupcakes': 'Los cupcakes se pueden personalizar para eventos. Consultar por diseños especiales y sabores.',
+                'brownie': 'El Brownie Supreme se sirve caliente con helado. También disponible para llevar en caja especial.'
+            };
+            
+            alert(mensajes[producto] || 'Información detallada disponible. ¡Contáctanos!');
+        }
+
+        // Navegación suave para enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Validación simple del formulario
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const nombre = this.querySelector('input[name="nombre"]').value;
+            const email = this.querySelector('input[name="email"]').value;
+            const mensaje = this.querySelector('textarea[name="mensaje"]').value;
+            
+            if (!nombre || !email || !mensaje) {
+                e.preventDefault();
+                alert('Por favor, completa todos los campos requeridos.');
+            }
+        });
+    </script>
+</body>
+</html>

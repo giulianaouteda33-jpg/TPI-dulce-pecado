@@ -1,0 +1,216 @@
+/* Estilos específicos para la página de pedidos */
+
+/* Contenedor principal */
+.pedidos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+/* Títulos */
+.pedidos-container h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #333;
+    font-size: 2.5rem;
+}
+
+.titulo-paquetes {
+    text-align: center;
+    margin: 4rem 0 2rem 0;
+    color: #333;
+    font-size: 2rem;
+}
+
+/* Pasos del pedido */
+.pasos-pedido {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.paso {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.paso:hover {
+    transform: translateY(-5px);
+}
+
+.paso .numero {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #ff6b6b;
+    color: white;
+    border-radius: 50%;
+    line-height: 40px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.paso h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.paso p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Grid de paquetes */
+.pedidos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+/* Tarjetas de paquetes */
+.pedido-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.pedido-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.pedido-card h3 {
+    color: #ff6b6b;
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.descripcion-paquete {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.precio-paquete {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 1.5rem 0;
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.lista-beneficios {
+    text-align: left;
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+    flex-grow: 1;
+}
+
+.lista-beneficios li {
+    margin-bottom: 0.8rem;
+    color: #666;
+    list-style-type: disc;
+}
+
+/* Botón de pedido */
+.btn-pedido {
+    display: inline-block;
+    background-color: #ff6b6b;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-pedido:hover {
+    background-color: #d33636;
+}
+
+/* Información de pedidos */
+.info-pedidos {
+    background-color: #f9f9f9;
+    padding: 3rem;
+    border-radius: 10px;
+    margin-top: 3rem;
+}
+
+.info-pedidos h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.titulo-info {
+    margin-top: 2rem !important;
+}
+
+.info-pedidos p {
+    margin-bottom: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.info-pedidos strong {
+    color: #333;
+}
+
+/* Contacto directo */
+.contacto-directo {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    border-left: 4px solid #ff6b6b;
+}
+
+.contacto-directo h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.contacto-directo p {
+    margin-bottom: 0.5rem;
+}
+
+.contacto-directo p strong {
+    color: #E1306C;
+}
+
+/* Footer específico para pedidos */
+.whatsapp-footer {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+/* Estilo para enlace activo en navegación */
+.nav-links a.active {
+    color: #ff6b6b !important;
+    font-weight: bold;
+    border-bottom: 2px solid #ff6b6b;
+}

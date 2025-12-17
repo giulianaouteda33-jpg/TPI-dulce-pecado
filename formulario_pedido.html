@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pedidos - Dulce Pecado</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="formulario_pedido.css">
+    <link rel="icon" type="image/x-icon" href="img/logo.jpg">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Dulce Pecado</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#postres">Postres</a></li>
+                <li><a href="pedidos.html">Paquetes</a></li>
+                <li><a href="formulario_pedido.html" class="active">Nuevo Pedido</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="formulario-container">
+        <div class="form-header">
+            <h1>📝 Nuevo Pedido</h1>
+            <p>Completa el formulario para registrar un pedido en el sistema</p>
+        </div>
+
+        <form action="guardar_pedido.php" method="POST" id="formPedido">
+            <!-- Sección Cliente - SOLO EMAIL -->
+            <div class="form-section">
+                <h2>👤 Datos del Cliente</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email_cliente">Email del Cliente:</label>
+                        <input type="email" name="email_cliente" id="email_cliente" 
+                               placeholder="ejemplo@gmail.com" required>
+                        <small>Ingresa el email del cliente</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección Productos -->
+            <div class="form-section">
+                <h2>🍰 Productos del Pedido</h2>
+                
+                <div class="productos-grid">
+                    <!-- Producto 1 -->
+                    <div class="producto-card">
+                        <div class="producto-info">
+                            <h3>Cookies New York</h3>
+                            <p class="producto-precio">$2.500 c/u</p>
+                        </div>
+                        <div class="producto-control">
+                            <label>Cantidad:</label>
+                            <input type="number" name="cantidad_cookies" min="0" value="0" class="cantidad-input" data-precio="2500">
+                            <span class="producto-subtotal">$0</span>
+                        </div>
+                    </div>
+
+                    <!-- Producto 2 -->
+                    <div class="producto-card">
+                        <div class="producto-info">
+                            <h3>Torta Rogel</h3>
+                            <p class="producto-precio">$22.500 c/u</p>
+                        </div>
+                        <div class="producto-control">
+                            <label>Cantidad:</label>
+                            <input type="number" name="cantidad_torta" min="0" value="0" class="cantidad-input" data-precio="22500">
+                            <span class="producto-subtotal">$0</span>
+                        </div>
+                    </div>
+
+                    <!-- Producto 3 -->
+                    <div class="producto-card">
+                        <div class="producto-info">
+                            <h3>Desayuno Especial</h3>
+                            <p class="producto-precio">$17.000 c/u</p>
+                        </div>
+                        <div class="producto-control">
+                            <label>Cantidad:</label>
+                            <input type="number" name="cantidad_desayuno" min="0" value="0" class="cantidad-input" data-precio="17000">
+                            <span class="producto-subtotal">$0</span>
+                        </div>
+                    </div>
+
+                    <!-- Producto 4 -->
+                    <div class="producto-card">
+                        <div class="producto-info">
+                            <h3>Paquete Básico</h3>
+                            <p class="producto-precio">$8.500 c/u</p>
+                        </div>
+                        <div class="producto-control">
+                            <label>Cantidad:</label>
+                            <input type="number" name="cantidad_basico" min="0" value="0" class="cantidad-input" data-precio="8500">
+                            <span class="producto-subtotal">$0</span>
+                        </div>
+                    </div>
+
+                    <!-- Producto 5 -->
+                    <div class="producto-card">
+                        <div class="producto-info">
+                            <h3>Paquete Familiar</h3>
+                            <p class="producto-precio">$15.000 c/u</p>
+                        </div>
+                        <div class="producto-control">
+                            <label>Cantidad:</label>
+                            <input type="number" name="cantidad_familiar" min="0" value="0" class="cantidad-input" data-precio="15000">
+                            <span class="producto-subtotal">$0</span>
+                        </div>
+                    </div>
+
+                    <!-- Producto 6 -->
+                    <div class="producto-card">
+                        <div class="producto-info">
+                            <h3>Paquete Fiesta</h3>
+                            <p class="producto-precio">$25.000 c/u</p>
+                        </div>
+                        <div class="producto-control">
+                            <label>Cantidad:</label>
+                            <input type="number" name="cantidad_fiesta" min="0" value="0" class="cantidad-input" data-precio="25000">
+                            <span class="producto-subtotal">$0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección Resumen -->
+            <div class="form-section resumen-section">
+                <h2>💰 Resumen del Pedido</h2>
+                <div class="resumen-box">
+                    <div class="resumen-item">
+                        <span>Producto:</span>
+                        <span id="resumen-producto">Ningún producto seleccionado</span>
+                        <input type="hidden" name="producto" id="producto_input">
+                    </div>
+                    <div class="resumen-item">
+                        <span>Cantidad Total:</span>
+                        <span id="resumen-cantidad">0</span>
+                        <input type="hidden" name="cantidad" id="cantidad_input">
+                    </div>
+                    <div class="resumen-item total">
+                        <span>Total a Pagar:</span>
+                        <span id="resumen-total">$0</span>
+                        <input type="hidden" name="total" id="total_input">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notas -->
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="notas">📝 Notas adicionales:</label>
+                    <textarea name="notas" id="notas" rows="3" placeholder="Ej: Fecha de entrega, indicaciones especiales, alergias..."></textarea>
+                </div>
+            </div>
+
+            <!-- Botones -->
+           <div class="form-buttons">
+    <button type="button" class="btn-secondary" onclick="window.location.href='pedidos.html'">Cancelar</button>
+    <button type="submit" class="btn-primary">Guardar Pedido</button>
+</div>
+        </form>
+
+        <div class="info-ayuda">
+            <h3>ℹ️ ¿Cómo funciona?</h3>
+            <p>1. Ingresa el email del cliente</p>
+            <p>2. Ingresa las cantidades de cada producto que el cliente desea</p>
+            <p>3. El sistema calculará automáticamente el total</p>
+            <p>4. Agrega notas si es necesario y guarda el pedido</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>Dulce Pecado</h3>
+                <p>Sistema de Pedidos</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Inicio</a>
+                <a href="pedidos.html">Paquetes</a>
+                <a href="formulario_pedido.html">Nuevo Pedido</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dulce Pecado. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        // Calcular totales
+        function calcularTotales() {
+            let cantidadTotal = 0;
+            let totalPagar = 0;
+            let productosSeleccionados = [];
+            
+            // Obtener todos los inputs de cantidad
+            const inputs = document.querySelectorAll('.cantidad-input');
+            
+            inputs.forEach(input => {
+                const cantidad = parseInt(input.value) || 0;
+                const precio = parseInt(input.dataset.precio);
+                const subtotal = cantidad * precio;
+                
+                // Actualizar subtotal del producto
+                const subtotalSpan = input.parentElement.querySelector('.producto-subtotal');
+                subtotalSpan.textContent = '$' + subtotal.toLocaleString();
+                
+                // Sumar a totales
+                if (cantidad > 0) {
+                    cantidadTotal += cantidad;
+                    totalPagar += subtotal;
+                    
+                    // Agregar producto a la lista
+                    const productoNombre = input.parentElement.parentElement.querySelector('h3').textContent;
+                    productosSeleccionados.push(`${productoNombre} x${cantidad}`);
+                }
+            });
+            
+            // Actualizar resumen
+            document.getElementById('resumen-cantidad').textContent = cantidadTotal;
+            document.getElementById('cantidad_input').value = cantidadTotal;
+            
+            document.getElementById('resumen-total').textContent = '$' + totalPagar.toLocaleString();
+            document.getElementById('total_input').value = totalPagar;
+            
+            if (productosSeleccionados.length > 0) {
+                document.getElementById('resumen-producto').textContent = productosSeleccionados.join(', ');
+                document.getElementById('producto_input').value = productosSeleccionados.join(', ');
+            } else {
+                document.getElementById('resumen-producto').textContent = 'Ningún producto seleccionado';
+                document.getElementById('producto_input').value = '';
+            }
+        }
+        
+        // Inicializar eventos
+        document.addEventListener('DOMContentLoaded', function() {
+            // Calcular al cargar
+            calcularTotales();
+            
+            // Escuchar cambios en inputs
+            document.querySelectorAll('.cantidad-input').forEach(input => {
+                input.addEventListener('input', calcularTotales);
+                input.addEventListener('change', calcularTotales);
+            });
+            
+            // Validar formulario
+            document.getElementById('formPedido').addEventListener('submit', function(e) {
+                const emailCliente = document.getElementById('email_cliente').value;
+                const cantidadTotal = parseInt(document.getElementById('cantidad_input').value) || 0;
+                
+                if (!emailCliente) {
+                    e.preventDefault();
+                    alert('Por favor, ingresa el email del cliente.');
+                    return false;
+                }
+                
+                if (cantidadTotal === 0) {
+                    e.preventDefault();
+                    alert('Debes seleccionar al menos un producto.');
+                    return false;
+                }
+            });
+        });
+ 
+    </script>
+</body>
+</html>
